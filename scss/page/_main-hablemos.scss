@@ -1,0 +1,11 @@
+main {
+    h2{
+        @extend %subtitulo
+    };
+    .container {
+        margin-bottom: 20px;
+        .imgHablemos {
+            width: 100%;
+        }
+    }
+}

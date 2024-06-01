@@ -1,0 +1,33 @@
+main {
+    h2{
+        @extend %subtitulo
+    };
+    .mainContainer {
+        display: grid;
+        @include position(20px, auto, 90vw, null);
+        // padding: 20px;
+        // margin: auto;
+        // /* height: 60vh; */
+        // width: 90vw;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "mapa video"
+                            "direccion direccion";
+        .mapa{
+            grid-area: mapa;
+        }
+        .video {
+            grid-area: video;
+        }
+        .centroParrafo {
+            width: 100%;
+            display: flex;
+            justify-content:center ;
+            font-size: 23px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(5, 79, 2);
+            grid-area: direccion;
+            text-align: justify;
+        }
+    }
+}

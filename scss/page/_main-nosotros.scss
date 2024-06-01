@@ -1,0 +1,23 @@
+main {
+    h2{
+        @extend %subtitulo
+    };
+    .grillaContainer {
+        display: grid;
+        @include position (20px, auto, 80vw, null);
+        // padding: 20px;
+        // margin: auto;
+        // width: 80vw;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: "item1 item2";
+        .imgNosotras {
+            width: 90%;
+            grid-area: item1;
+        }
+        .parrafo {
+            grid-area: item2;
+            text-align: justify;
+        }
+    }
+}

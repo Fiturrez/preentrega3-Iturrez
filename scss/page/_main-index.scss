@@ -1,0 +1,99 @@
+main {
+
+    .carrusel {
+        display: inline;
+        max-width: 80%;
+        margin: 0px 30px  30px 0px  ;
+        .carousel-item img {
+            max-width: 70%; /* Ajusta el tamano maximo de las imagenes al 70% del contenedor */
+            height: auto; /* Mantiene la relacion de aspecto de las imagenes */
+            margin: 0 auto; /* para centrar las imagenes*/
+         }
+        .wordsh5 {
+            font-size: 100px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color:rgb(238, 230, 82)
+            
+        }
+        .wordsP {
+            font-size: 20px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: rgb(24, 57, 24);
+        }        
+    }
+    //============
+    .carouselDos {
+        overflow: hidden;
+        width: 100%;
+        padding-bottom: 20px;
+      }
+      
+      .image-strip {
+        display: flex;
+        // animation: scrollImages 10s linear infinite; 
+        animation-name: scrollImages;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      
+      @keyframes scrollImages {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%); /* Desplaza las imágenes hacia la izquierda */
+        }
+      }
+      
+      .image-strip img {
+        flex: 0 0 auto;
+        width: 20%; /* Para que las imágenes ocupen todo el ancho del carrusel */
+        height: 30%;
+      }
+      .contenedor {
+        display: grid;
+        margin: 0 auto;
+        width: 95%;
+        text-align: justify;
+        font-size: 15px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "itemMain1";
+        overflow: hidden;
+        
+        .itemMain1 {
+          // background-color: rgb(238, 230, 82);
+          padding-bottom: 25px;
+          width: 100%;
+          align-items: center;
+          height: 5px;
+          animation-delay: 0s;
+          animation-name: desplazamiento;
+          animation-duration: 30s;
+          animation-timing-function: ease-in;
+          animation-iteration-count: infinite;
+          white-space: nowrap;
+        }
+        @keyframes desplazamiento {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+        .itemMain2{
+          display: none;
+        }
+      }
+
+    //texto animado
+
+
+
+    }
+
+
+

@@ -1,0 +1,183 @@
+//MOBILE
+@media screen and (max-width: 768px) {
+    body{
+        header{
+            .titulo {
+                font-size: 40px;
+                color: rgb(88, 9, 125);
+                font-weight:bolder;
+            
+                .titulo2 {
+                    font-size: 20px;
+                }
+            }
+            
+        }
+    //index
+    main {
+        .carouselDos{
+            display: none;
+        }
+        .contenedor {
+            .itemMain1{
+                display: none;
+            }
+            .itemMain2{
+                display: block;
+                p {
+                text-align: center;
+                }
+            }
+        }
+        
+    }
+
+    //Page productos
+    main{
+        .contenedorCards {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(8, 1fr);
+            grid-template-areas: "card1"
+                                 "card2"
+                                 "card3"
+                                 "card4"
+                                 "card5"
+                                 "card6"
+                                 "card7"
+                                 "card8"
+                                 "card9"
+                                 "card10"
+                                 "card11"
+                                 "card12";
+        }
+    }
+
+    //Page Nosotras
+    main {
+        .grillaContainer {
+            height: auto;
+            width: auto;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas: "item1"
+                                "item2";
+            .parrafo {
+            font-size: small;
+            text-align: justify;
+            }
+        }
+    }
+
+    //Page Donde Comprar
+    main {
+        .mainContainer {
+            width: auto;
+            height: auto;
+            margin: 0 auto  ;
+            gap: 10px;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas:
+                                "mapa"
+                                "video"
+                                "direccion" ;
+            .mapa, .video {
+                margin: 0 auto;
+                width: 290px;
+                height: 190px;
+            }
+            .centroParrafo {
+            height: auto;
+            font-size: small;    
+            }
+        }
+    }
+
+    //Hablemos
+    main{
+        .imgHablemos {
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+
+    //Footer mobile/tablet
+    footer {
+       .footerDesktop {
+        display: none;
+       }
+       .footerMobile {
+        display: block;
+       }
+       .footerStyle {
+        height: 15vh;
+       }
+    }
+    }
+}
+    
+    
+    // TABLET
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        header{
+            .titulo {
+                font-size: 50px;
+                color: rgb(5, 70, 21);
+                font-weight:bolder;
+            }
+        }
+
+        // Page productos
+        main{ 
+            .contenedorCards {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+                grid-template-areas:"card1 card2"
+                                    "card3 card4"
+                                    "card5 card6"
+                                    "card7 card8"
+                                    "card9 card10"
+                                    "card11 card12";
+            }
+        }
+        //Page Donde Comprar
+        main {
+            .mainContainer {
+                width: auto;
+                height: auto;
+                margin: 0 auto  ;
+                gap: 10px;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-areas:
+                                    "mapa"
+                                    "video"
+                                    "direccion" ;
+            
+            .video, .mapa {
+                margin: 0 auto;
+                width: 400px;
+                height: 300px;
+        
+            }
+            .centroParrafo {
+                height: auto;
+                font-size: large;
+            
+            }
+        }
+    }
+        
+    //Footer mobile/tablet 
+    footer {
+       .footerDesktop {
+        display: none;
+       }
+       .footerMobile {
+        display: block;
+       }
+       .footerStyle {
+        height: 20vh;    
+       }
+    }
+}
