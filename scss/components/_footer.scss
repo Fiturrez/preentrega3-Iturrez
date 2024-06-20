@@ -1,24 +1,34 @@
 footer {
-    position: static;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    .horizontal-line {
+        width: 100%;
+        border: none;
+        height: 2px; /* Altura deseada para la línea */
+        background-color: black; /* Color de la línea */
+      }
+    bottom: 0px;
+    width: auto;
+    padding: 10px;
+    margin-top: 30px;
     .footerMobile {
         display: none;
     }
     .footerStyle {
-        position: static;
         padding: 30px;
         margin: 0 auto;
         height: 12vh;
-        width: 100%;
-        background-color: $bgColorFooter;
-        background-image: $bgImgFooter;
+        width: auto;
     }
     .items {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-bottom: 20px;
+        .fa-brands {
+            font-size: 25px;
+            padding: 8px;
+            color: #0b0b0b;
+
+        }
     }
     
     .item1 {
@@ -32,12 +42,13 @@ footer {
         margin-right: 7px;
     }
     
-    .copy1 {
-        margin: 0 auto;
+    .copy1 { 
         display: flex;
-        justify-items: center;
+        justify-content:center;
         font-size: small;
-    }
+        align-self: center;
+        
+    } 
     
     .iconos{
         width: 30px;
@@ -47,11 +58,12 @@ footer {
     }
     
     .volverInicio {
-        text-decoration: none;
-        color: #07574b;
+        font-size: 25px;       
+        color: #0b0b0b;
+        text-decoration: none;     
         &:hover {
             font-weight: bolder;
-            font-size: 20px;
+            font-size: 35px;
 
          }   
     }

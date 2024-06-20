@@ -1,14 +1,46 @@
 main {
     h2{
-        @extend %subtitulo
-    };
+        @extend %subtitulo;
+    }
+    .tracking-in-contract-bck {
+        -webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    }
+    @-webkit-keyframes tracking-in-contract-bck {
+        0% {
+          letter-spacing: 1em;
+          -webkit-transform: translateZ(400px);
+                  transform: translateZ(400px);
+          opacity: 0;
+        }
+        40% {
+          opacity: 0.6;
+        }
+        100% {
+          -webkit-transform: translateZ(0);
+                  transform: translateZ(0);
+          opacity: 1;
+        }
+      }
+      @keyframes tracking-in-contract-bck {
+        0% {
+          letter-spacing: 1em;
+          -webkit-transform: translateZ(400px);
+                  transform: translateZ(400px);
+          opacity: 0;
+        }
+        40% {
+          opacity: 0.6;
+        }
+        100% {
+          -webkit-transform: translateZ(0);
+                  transform: translateZ(0);
+          opacity: 1;
+        }
+      }
     .contenedorCards {
         display: grid;
         @include position (20px, 0 auto, 80vw, auto);
-        // padding: 20px;
-        // margin: 0 auto; 
-        // width: 80vw;
-        // height: auto; 
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas:"card1 card2 card3 card4"
@@ -51,7 +83,6 @@ main {
         .card12 {
             grid-area: card12;
         }
-
         .card-body {
             background-color: $backgroundMainColor;
             background-image: $backgroundMainImg;
@@ -69,11 +100,4 @@ main {
             color: black;
         }
     }
-
-
-
-
-
-
-
 }
